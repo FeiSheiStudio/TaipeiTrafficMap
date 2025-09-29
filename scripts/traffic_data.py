@@ -4,6 +4,10 @@ from pathlib import Path
 
 # Do all data processing
 import polars as pl
+import pandas as pd
+
+import re
+from io import StringIO
 
 class DataImport:
     def __init__(self):
@@ -24,9 +28,10 @@ class DataImport:
         dfs = []
 
         for ifile in self.csv_files:
-            file = pl.read_csv(ifile,  encoding="cp950")
-            dfs.append(file)
-
+            if ifile != self.output_path:
+                file = pd.read_csv(ifile,   encoding="cp950")
+                df = pl.from_pandas(file)
+                dfs.append(df)
         # Concatenate all CSVs and convert headers in english
         combined = pl.concat(dfs)
         combined = combined.rename(header_dict)
