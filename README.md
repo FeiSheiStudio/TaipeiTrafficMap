@@ -1,4 +1,4 @@
-<img width="1630" height="983" alt="image" src="https://github.com/user-attachments/assets/cf98b494-dc5e-48d1-a26e-08cab33be0d1" /># Taipei Traffic Accident Heatmap
+# Taipei Traffic Accident Heatmap
 
 This project started as a small experiment in **data preprocessing with Polars** and evolved into an **interactive heatmap of traffic accidents in Taipei**.
 
@@ -61,7 +61,7 @@ Install dependencies with `pip install -r requirements.txt`.
 - Hotspots indicate areas with higher accident density  
 - Fully interactive: zoom, pan, and explore clusters  
 
-![Uploading Screenshot 2026-02-20 153949.png…]()
+<img width="1630" height="983" alt="image" src="https://github.com/user-attachments/assets/cf98b494-dc5e-48d1-a26e-08cab33be0d1" />
 
 
 
